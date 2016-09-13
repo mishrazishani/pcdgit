@@ -1,25 +1,26 @@
 /*to read year and check if leap year or not*/
 #include<stdio.h>
+int ly(int y);
 int main()
 {
-int year;
-printf("enter a year\n");
-scanf("%d",&year);
-if(year%400==0)
-  {
-  printf("%d is a leap year\n",year);
+  int y,x;
+  printf("enter the year  :");
+  scanf("%d",&y);
+  x=ly(y);
+  if(x==0)
+  { 
+    printf("it is a leap year\n");
   }
-else if(year%100==0)
+  else if(x==1)
   {
-  printf("%d is not a leap year\n",year);
+    printf("it is not a leap year\n");
   }
-else if(year%4==0)
-  {
-  printf("%d is a leap year\n",year);
-  }
-else
-  {
-  printf("%d is not a leap year\n",year);
-  }
-return 0;
+  return 0;
+}
+int ly(y)
+{
+  if(((y%4==0)&&(y%100!=0))||(y%400==0))
+    return 0;
+  else
+    return 1;
 }
