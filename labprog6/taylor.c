@@ -1,34 +1,26 @@
 #include<math.h>
 #include<stdio.h>
-
-float mysinx(float x)
+float mysinx(float degree)
 {
-int i,n;
-float degree,term,sum;
-x=degree*(3.142/180.0);
-n=1;
+int i;
+float x,term,sum;
+x=(degree*(3.142/180.0));
 term=x;
-sum=0;
-for(i=0;i<=n;i+=2)
-{
-term=-term*x*x/(i*(i-1));
-sum=sum+term;
-n=n+1;
-
-}
-
+sum=term;
+for(i=3;fabs(term)>0.00001;i+=2)
+    {
+    term=-term*x*x/(i*(i-1));
+    sum=sum+term;
+    }
+return sum;
 }
 int main()
 {
-int b,n;
-float degree,sum, x;
-printf("enter the value of n\n");
-scanf("%d",&n);
+float degree,b;
 printf("enter the degree\n");
 scanf("%f",&degree);
-b=mysinx(x);
-printf("sum of the sine series sin(%f)=%f\n",degree,sum);
+b=mysinx(degree);
+printf("sum of the sine series sin(%f)=%f\n",degree,b);
 
 return 0;
 }
-
