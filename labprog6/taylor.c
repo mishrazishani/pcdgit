@@ -20,7 +20,8 @@ float degree,b;
 printf("enter the degree\n");
 scanf("%f",&degree);
 b=mysinx(degree);
-printf("sum of the sine series sin(%f)=%f\n",degree,b);
+printf("sin(%f)=%f\n",degree,b);
+printf("sin(%f)=%f",degree,sin(degree*3.142/180.0));
 
 return 0;
 }
