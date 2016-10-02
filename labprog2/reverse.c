@@ -15,7 +15,7 @@ return rev;
 }
 int main()
   {
-  int x,b;
+  int x,b,y,rev;
   printf("enter the number\n");
   scanf("%d",&x);
   b=reverse(x);
