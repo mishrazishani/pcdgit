@@ -19,7 +19,7 @@ int main()
 float x,b;
 printf("enter the number\n");
 scanf("%f",&x);
-b=sqrt(x);
+b=squareroot(x);
 printf(" %f is the sqrt of the number\n",b);
 return 0;
 }
