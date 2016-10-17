@@ -84,7 +84,7 @@ char key[20];
 printf("enter the key to be searchrd\n");
 scanf("%s",key);
 r=search(m,n,strings,key);
-if(r>0)
+if(r>=0)
 	{
 	printf("the position of the key is %d\n",r);
 	}
