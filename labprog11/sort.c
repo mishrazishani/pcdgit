@@ -81,7 +81,7 @@ sort(m,n,strings);
 outputstrings(m,n,strings);
 int r;
 char key[20];
-printf("enter the key to be searchrd\n");
+printf("enter the key to be searched\n");
 scanf("%s",key);
 r=search(m,n,strings,key);
 if(r>=0)
