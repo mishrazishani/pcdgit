@@ -2,7 +2,8 @@
 #include<string.h>
 void inputstrings(int m, int n, char s[m][n])
 {
-for(int i=0;i<m;i++)
+    int i;
+for( i=0;i<m;i++)
 	{
 	printf("enter next string\n");
 	scanf("%s",s[i]);
@@ -10,7 +11,8 @@ for(int i=0;i<m;i++)
 }
 void outputstrings(int m, int n, char s[m][n])
 {
-for(int i=0;i<m;i++)
+    int i;
+for( i=0;i<m;i++)
 {
 printf("%s\n",s[i]);
 }
@@ -20,10 +22,11 @@ void sort(int m, int n,char s[m][n])
 int flag=0;
 char temp[n];
 int t=0;
-for(int i=0;i<m-1,j++)
+int i,j;
+for( i=0;i<m-1;i++)
 {
 	flag=0;
-	for(int j=0;j<m-i-1;j++)
+	for( j=0;j<m-i-1;j++)
 	{
 	t=strcmp(s[j],s[j+1]);
 	if(t>0)
@@ -73,7 +76,7 @@ int n=100;
 printf("enter the no of strings\n");
 scanf("%d",&m);
 char strings[m][n];
-intputstrings(m,n,strings);
+inputstrings(m,n,strings);
 sort(m,n,strings);
 outputstrings(m,n,strings);
 int r;
