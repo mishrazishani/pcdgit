@@ -57,7 +57,7 @@ while(left<right)
 		{
 		left=mid+1;
 		}
-	if(t>0)
+	else if(t>0)
 		{
 		right=mid-1;
 		}
